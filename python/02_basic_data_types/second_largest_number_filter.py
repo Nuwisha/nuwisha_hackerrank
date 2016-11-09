@@ -1,8 +1,10 @@
 link = "https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list"
 
 # ---=== SOLUTION ===---
-total, L = int(input()), list(map(int, input().split()))
-print(list(sorted(set(L)))[-2])
+total = int(input().strip())
+L = list(map(int, input().split()))
+L = list(filter(lambda x : x != max(L),L))
+print(max(L))
 
 # ---=== TASK ===---
 task = """
